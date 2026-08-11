@@ -1,0 +1,35 @@
+_metadata:
+  major_version: 1
+
+display_information:
+  name: UwUConverter
+  description: Convert, compress, extract, and batch-convert files from Slack.
+  background_color: "#2d2d2d"
+
+features:
+  bot_user:
+    display_name: UwUConverter
+    always_online: false
+
+  slash_commands:
+    - command: /uwu
+      description: Run UwUConverter on the latest file you shared.
+      usage_hint: convert webp | compress 50 | archive extract | batch image webp
+      should_escape: false
+
+oauth_config:
+  scopes:
+    bot:
+      - commands
+      - chat:write
+      - files:read
+      - files:write
+
+settings:
+  event_subscriptions:
+    bot_events:
+      - file_shared
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  is_hosted: false
+  token_rotation_enabled: false

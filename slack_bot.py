@@ -33,6 +33,9 @@ def latest_file_id(team_id, user_id, channel_id):
 
 @app.event("file_shared")
 def handle_file_shared(event):
+    print("FILE SHARED EVENT:")
+    print(event)
+
     remember_file(
         event.get("team_id"),
         event.get("user_id"),
@@ -40,6 +43,12 @@ def handle_file_shared(event):
         event.get("file_id")
         or (event.get("file") or {}).get("id"),
     )
+
+
+@app.command("/uwuconverter-ping")
+def uwuconverter_ping(ack, respond):
+    ack()
+    respond("UwUConverter is online! :3")
 
 
 def main():

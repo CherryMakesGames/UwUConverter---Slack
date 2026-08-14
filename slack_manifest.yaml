@@ -3,7 +3,7 @@ _metadata:
 
 display_information:
   name: UwUConverter
-  description: Convert, compress, extract, and batch-convert files from Slack.
+  description: Convert and compress files from Slack.
   background_color: "#2d2d2d"
 
 features:
@@ -14,7 +14,7 @@ features:
   slash_commands:
     - command: /uwu
       description: Run UwUConverter on the latest file you shared.
-      usage_hint: convert webp | compress 50 | archive extract | batch image webp
+      usage_hint: convert webp | compress 50
       should_escape: false
 
 oauth_config:
